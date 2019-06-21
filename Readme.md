@@ -6,6 +6,8 @@
 
 ### Install
 
+Do NOT clone the project. 
+The following script takes care of everything for u :wink:
 ```
-wget -O - https://raw.githubusercontent.com/rusito-23/ZacEfron/master/install.sh | sh
+wget -O - https://raw.githubusercontent.com/rusito-23/Zacky4Ever/master/install.sh | sh
 ```

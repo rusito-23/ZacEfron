@@ -29,7 +29,7 @@ if [[ "$OS" == "MAC" ]]; then # MAC CASE
     # create plist
     PLIST_NAME=com.zac.efron.plist
     touch $HOME/Library/LaunchAgents/$PLIST_NAME
-    echo $(sh $HOME/ZacEfron/plist.sh $ROOT_FOLDER) > $HOME/Library/LaunchAgents/$PLIST_NAME
+    echo $(sh $HOME/Zacky4Ever/plist.sh $ROOT_FOLDER) > $HOME/Library/LaunchAgents/$PLIST_NAME
 
     # launch plist
     launchctl unload $HOME/Library/LaunchAgents/$PLIST_NAME

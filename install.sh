@@ -7,13 +7,13 @@
 
 # INSTALL
 
-git clone https://github.com/rusito-23/ZacEfron.git $HOME/ZacEfron
-cd $HOME/ZacEfron
+git clone https://github.com/rusito-23/Zacky4Ever.git $HOME/Zacky4Ever
+cd $HOME/Zacky4Ever
 sh zac-efron.sh
 
 # REMOVE ALL TRACES
 cd $HOME
-rm -rf $HOME/ZacEfron
+rm -rf $HOME/Zacky4Ever
 
 SB_GREEN="\033[0;32m"
 SB_NOCOLOR="\033[0m"

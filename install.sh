@@ -15,6 +15,6 @@ sh zac-efron.sh
 cd $HOME
 rm -rf $HOME/ZacEfron
 
-SB_GREEN="\[\033[1;32m\]"
-SB_NOCOLOR="\[\033[0m\]"
+SB_GREEN="\033[0;32m"
+SB_NOCOLOR="\033[0m"
 echo "${SB_GREEN}READY BITCH${SB_NOCOLOR}"

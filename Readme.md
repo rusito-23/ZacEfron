@@ -1,4 +1,4 @@
-# Zacky4Ever :heart_eyes:
+# Zacky4Ever :heart_eyes:
 
 ## Make shure he will never leave your desktop 
 

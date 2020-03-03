@@ -2,9 +2,11 @@
 # check operative system
 if [[ "$OSTYPE" == "darwin"* ]]; then
     OS="MAC"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    OS=$(sh linux-environments.sh -n)
-    # TODO: missing jobs for environments
+fi
+
+if [ "${OS+set}" != set ]; then
+  echo "OS is not SET"
+  exit 1
 fi
 
 # set vars

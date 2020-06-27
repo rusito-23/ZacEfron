@@ -1,6 +1,9 @@
 # Zacky4Ever :heart_eyes:
 
-## Make shure he will never leave your desktop 
+## Make sure he will never leave your desktop 
+
+This script creates a Cron Job to change the wallpaper using a random Zack Efron picture every minute.
+As of now, it only supports macOS Catalina
 
 ![Zacky](pictures/zac-004.jpg)
 

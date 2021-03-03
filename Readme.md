@@ -1,16 +1,30 @@
 # Zacky4Ever :heart_eyes:
 
-## Make sure he will never leave your desktop 
+Set a random Zack Efron wallpaper every minute.
 
-This script creates a Cron Job to change the wallpaper using a random Zack Efron picture every minute.
-As of now, it only supports macOS Catalina
+![Zacky](pictures/zac-005.jpg)
 
-![Zacky](pictures/zac-004.jpg)
+### Supported OS
+
+Please do not run the command if the OS isn't in this list as _tested_:
+
+| OS | Tested On |
+| --- | --- |
+| macOS | Catalina, Big Sur |
+| Linux | In Progress :cyclone: |
 
 ### Install
 
-Do NOT clone the project. 
-The following script takes care of everything for u :wink:
+Run the following command
+
 ```
-wget -O - https://raw.githubusercontent.com/rusito-23/Zacky4Ever/master/install.sh | sh
+wget -O - https://raw.githubusercontent.com/rusito-23/Zacky4Ever/master/remote.install.sh | sh
+```
+
+### Uninstall
+
+Run the following command
+
+```
+wget -O - https://raw.githubusercontent.com/rusito-23/Zacky4Ever/master/remote.uninstall.sh | sh
 ```

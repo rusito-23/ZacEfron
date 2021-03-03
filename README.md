@@ -13,6 +13,14 @@ Please do not run the command if the OS isn't in this list as _tested_:
 | macOS | Catalina, Big Sur |
 | Linux | In Progress :cyclone: |
 
+### Requirements
+
+For the remote install to work you need to have installed:
+
+- `wget`
+- `sh`
+- `git`
+
 ### Install
 
 Run the following command

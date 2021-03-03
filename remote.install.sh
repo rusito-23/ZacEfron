@@ -11,7 +11,7 @@ REPO_PATH=$HOME/Zacky4Ever
 # INSTALL
 git clone $GH_REPO_URL $REPO_PATH
 cd $REPO_PATH
-sh zac-efron.sh
+sh install.sh
 
 # REMOVE ALL TRACES
 cd $HOME

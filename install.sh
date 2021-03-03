@@ -21,17 +21,13 @@ cp -r pictures $ROOT_FOLDER
 cp randomizer.sh $ROOT_FOLDER/.randomizer.sh
 cp jobs/$OS.sh $ROOT_FOLDER/.job.sh
 
-# give perms to job and randomizer
-chmod +x $ROOT_FOLDER/.randomizer.sh
-chmod +x $ROOT_FOLDER/.job.sh
-
 # setup cronjob
 if [[ "$OS" == "MAC" ]]; then # running macOS
 
     # create plist
     PLIST_NAME=com.zac.efron.plist
     touch $HOME/Library/LaunchAgents/$PLIST_NAME
-    echo $(sh $HOME/Zacky4Ever/plist.sh $ROOT_FOLDER) > $HOME/Library/LaunchAgents/$PLIST_NAME
+    echo $(sh $HOME/Zacky4Ever/create_plist.sh $ROOT_FOLDER) > $HOME/Library/LaunchAgents/$PLIST_NAME
 
     # launch plist
     launchctl unload $HOME/Library/LaunchAgents/$PLIST_NAME
